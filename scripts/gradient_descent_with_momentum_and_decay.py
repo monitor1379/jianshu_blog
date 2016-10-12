@@ -6,7 +6,7 @@
 
 @version: 1.0
 @license: Apache Licence
-@file: gradient_descent_with_momentum_and_decay.py
+@file: test5_sgd.py
 @time: 2016/10/11 16:12
 
 
@@ -106,6 +106,7 @@ def demo0_GD():
 
     lr = 0.3
     x = GD(x_start, dfunc, epochs, lr=lr)
+    print x
 
     color = 'r'
     plt.plot(line_x, line_y, c='b')
@@ -121,6 +122,7 @@ def demo1_GD_lr():
     line_y = func(line_x)
     plt.figure('Gradient Desent: Learning Rate')
 
+
     x_start = -5
     epochs = 5
 
@@ -129,6 +131,7 @@ def demo1_GD_lr():
     color = ['r', 'g', 'y']
     size = np.ones(epochs+1) * 10
     size[-1] = 70
+
     for i in range(len(lr)):
         x = GD(x_start, dfunc, epochs, lr=lr[i])
         plt.subplot(1, 3, i+1)
@@ -145,9 +148,9 @@ def demo2_GD_momentum():
     plt.figure('Gradient Desent: Learning Rate, Momentum')
 
     x_start = -5
-    epochs = 5
+    epochs = 6
 
-    lr = [0.01, 0.1, 0.4, 0.9]
+    lr = [0.01, 0.1, 0.6, 0.9]
     momentum = [0.0, 0.1, 0.5, 0.9]
 
     color = ['k', 'r', 'g', 'y']
@@ -209,9 +212,9 @@ def demo4_how_to_chose_decay():
     plt.show()
 
 def run():
-    demo0_GD()
+    # demo0_GD()
     # demo1_GD_lr()
-    # demo2_GD_momentum()
+    demo2_GD_momentum()
     # demo3_GD_decay()
     # demo4_how_to_chose_decay()
 
