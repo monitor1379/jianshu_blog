@@ -100,7 +100,8 @@ setup(
 
 build过程如下：
 
-![build过程](http://upload-images.jianshu.io/upload_images/1624726-bf933d71997fe2c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![build过程](http://upload-images.jianshu.io/upload_images/1624726-2a61a2d1b100727b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 然后可以看见在同级目录下多了两个文件：
   - `_cos_doubles.c`，使用Python C-API自动包装生成的C文件。
